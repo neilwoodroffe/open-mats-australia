@@ -1,0 +1,42 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+
+<% provide(:title, @user.name) %> 
+   <div class="well">
+<h1>
+   
+    <%= @user.name %>
+  </h1>
+<%= gravatar_for @user %>
+  <h4>
+    Address: <%= @user.address %> <%= @user.suburb %> <%= @user.state %> <%= @user.postcode %><br/>
+    Phone: <%= @user.phone %><br/>
+    email: <a href="mailto:<%= @user.email %>"><%= @user.email %></a><br/>
+    Website: <a href="https://<%= @user.website %>"><%= @user.website %></a><br/>
+  </h4>
+</div>
+<div class="well">
+  <h2>
+    Open Mat Times
+  </h2>
+  <h4>
+  Sunday: <%= @user.Sunday %><br/>
+  Monday: <%= @user.Monday %><br/>
+  Tuesday: <%= @user.Tuesday %><br/>
+  Wednesday: <%= @user.Wednesday %><br/>
+  Thursday: <%= @user.Thursday %><br/>
+  Friday: <%= @user.Friday %><br/>
+  Saturday: <%= @user.Saturday %><br/>
+   </h4>
+</div>

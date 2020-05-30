@@ -1,0 +1,67 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span5 offset0">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name, 'Gym Name' %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+    
+      <%= f.label :address, 'Street Address' %>
+      <%= f.text_field :address %>
+    
+      <%= f.label :suburb %>
+      <%= f.text_field :suburb %>
+    
+      <%= f.label :state %>
+      <%= f.text_field :state %>
+    
+      <%= f.label :postcode %>
+      <%= f.text_field :postcode %>
+    
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+    
+      <%= f.label :website %>
+      <%= f.text_field :website %>
+
+      <h2>Add your open mat times</h2>
+
+      <%= f.label :Sunday %>
+      <%= f.text_field :Sunday %>
+
+      <%= f.label :Monday %>
+      <%= f.text_field :Monday %>
+
+      <%= f.label :Tuesday %>
+      <%= f.text_field :Tuesday %>
+
+      <%= f.label :Wednesday %>
+      <%= f.text_field :Wednesday %>
+
+      <%= f.label :Thursday %>
+      <%= f.text_field :Thursday %>
+
+      <%= f.label :Friday %>
+      <%= f.text_field :Friday %>
+
+      <%= f.label :Saturday %>
+      <%= f.text_field :Saturday %> 
+
+      <p>You can add a logo picture later after signing in (using your gym's email address and Gravatar)<br>     
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
